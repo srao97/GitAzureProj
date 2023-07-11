@@ -1,4 +1,4 @@
-# Controls when the workflow will run
+# Controls when the workflow will run on
 on:
   push:
     branches:
@@ -17,7 +17,7 @@ jobs:
       - uses: actions/checkout@v2
       # You may pin to the exact commit or the version.
       - name: Salesforce SFDX CLI Action
-      - uses: sfdx-actions/setup-sfdx@v1
+        uses: sfdx-actions/setup-sfdx@v1
       - run: npm install sfdx-cli -g
       # Authorize a Salesforce org                  
       - run: echo "${{ secrets.SALESFORCE_JWT_SECRET_KEY }}" > server.key
